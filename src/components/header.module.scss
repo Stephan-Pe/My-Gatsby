@@ -1,6 +1,32 @@
 @import '../styles/colors';
 
-.headBack {
-    background-color: $headercolor;
-    margin-bottom: 1.45rem,
+.header {
+    background-color: $bgcolor;
+    box-shadow: 1px 0 6px $headercolor;
+    margin-bottom: 1.45rem;
+    padding: 1rem 0 3rem;
+}
+.mytitle {
+    font-family: sans-serif;
+    color: $whitetext;
+    text-decoration: none;
+    font-size: 2.6rem;
+}
+.nav__list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+.nav__listItem {
+    font-family: sans-serif;
+    color: $whitetext;
+    font-size: 1.8rem;
+    margin-right: 1.6rem;
+    text-decoration: none;
+}
+.nav__listItem:hover {
+    color: $graytext;
+}
+.active-nav__item {
+    color: $darkgraytext;
 }

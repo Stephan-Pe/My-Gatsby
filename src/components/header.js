@@ -4,26 +4,16 @@ import React from "react"
 
 import headerStyle from './header.module.scss'
 
+
 const Header = ({ siteTitle }) => (
-  <header className={headerStyle.headBack}>
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <header className={headerStyle.header}>
+    <div>
+      <h2><Link className={headerStyle.mytitle} to="/">Stephan Petersen</Link></h2> 
+      <ul className={headerStyle.nav__list}>
+        <li><Link className={headerStyle.nav__listItem} activeClassName={headerStyle.activeNav__item} to="/">Home</Link></li>
+        <li><Link className={headerStyle.nav__listItem} activeClassName={headerStyle.activeNav__item} to="/page-2/">About</Link></li>
+        <li><Link className={headerStyle.nav__listItem} activeClassName={headerStyle.activeNav__item} to="/blog/">Blog</Link></li>
+      </ul>
     </div>
   </header>
 )
